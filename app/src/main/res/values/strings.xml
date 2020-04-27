@@ -1,21 +1,13 @@
 <resources>
     <string name="app_name">Projeto1</string>
     <string-array name="planets_array">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
+        <item>Preciso ir ao banheiro</item>
+        <item>Quero comer algo doce</item>
+        <item>Quero comer algo salgado</item>
+        <item>Estou com sede</item>
+        <item>Quero respirar ar puro</item>
+        <item>Quero assistir as noticias</item>
+        <item>Não estou me sentindo bem</item>
+        <item>Me leve agora para o PS</item>
     </string-array>
 </resources>
