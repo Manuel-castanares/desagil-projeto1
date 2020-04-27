@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Projeto1</string>
-    <string-array name="planets_array">
+    <string-array name="frases_array">
         <item>Preciso ir ao banheiro</item>
         <item>Quero comer algo doce</item>
         <item>Quero comer algo salgado</item>
