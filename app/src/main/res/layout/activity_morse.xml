@@ -8,9 +8,21 @@
     android:padding="20dp"
     tools:context=".MorseActivity">
 
-    <TextView android:id="@+id/screen"
+    <TextView android:id="@+id/texto"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:layout_height="300dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:hint="Texto">
+
+    </TextView>
+
+    <TextView android:id="@+id/morse"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:textSize="30sp"
         android:textStyle="bold"
         android:hint="morse">
@@ -18,7 +30,8 @@
     </TextView>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
 
         <Button android:id="@+id/dot_button"
             android:layout_width="wrap_content"
@@ -34,10 +47,49 @@
             android:hint="-">
         </Button>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <Button android:id="@+id/backspace_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:hint="backspace">
+        </Button>
+
+        <Button android:id="@+id/space_button"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="space">
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <Button android:id="@+id/clear_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:hint="Clear">
+        </Button>
+
+        <Button android:id="@+id/enter_button"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="Enter">
+        </Button>
+
+    </LinearLayout>
 
     <Button android:id="@+id/back_button"
         android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:hint="Voltar">
     </Button>
 
