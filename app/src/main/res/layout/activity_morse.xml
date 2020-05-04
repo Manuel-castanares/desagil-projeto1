@@ -34,17 +34,11 @@
         android:gravity="center_horizontal">
 
         <Button android:id="@+id/dot_button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity = "center"
             android:textSize="30sp"
-            android:hint=".">
-        </Button>
-
-        <Button android:id="@+id/dash_button"
-            android:textSize="30sp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:hint="-">
+            android:hint=".   /  -">
         </Button>
     </LinearLayout>
     <LinearLayout
@@ -56,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textSize="20sp"
-            android:hint="backspace">
+            android:hint="backspace morse/text">
         </Button>
 
         <Button android:id="@+id/space_button"
@@ -87,11 +81,13 @@
 
     </LinearLayout>
 
-    <Button android:id="@+id/back_button"
-        android:layout_width="100dp"
+    <Button
+        android:id="@+id/back_button"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Voltar">
-    </Button>
+        android:gravity="center"
+        android:hint="Voltar"></Button>
 
 
 </LinearLayout>
