@@ -109,9 +109,7 @@ public class Translator {
 
     // Você deve mudar o recheio deste método,
     // de acordo com os requisitos do projeto.
-    private String charToMorse(Node node) {
-        return " ";
-    }
+    private String charToMorse(Node node) { return " "; }
 
 
     // Este método deve permanecer como está.

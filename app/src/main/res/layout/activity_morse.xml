@@ -8,10 +8,29 @@
     android:padding="20dp"
     tools:context=".MorseActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button android:id="@+id/charToMorse"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:hint = "Char 2 Morse">
+
+        </Button>
+        <Button android:id="@+id/morseToChar"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:hint = "Morse 2 Char">
+
+        </Button>
+  </LinearLayout>
+
     <TextView android:id="@+id/texto"
         android:layout_width="match_parent"
         android:gravity="center_horizontal"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:textSize="30sp"
         android:textStyle="bold"
         android:hint="Texto">
@@ -34,11 +53,17 @@
         android:gravity="center_horizontal">
 
         <Button android:id="@+id/dot_button"
-            android:layout_width="match_parent"
+            android:layout_width="170dp"
             android:layout_height="match_parent"
             android:gravity = "center"
             android:textSize="30sp"
             android:hint=".   /  -">
+        </Button>
+        <Button android:id="@+id/space_button"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="space">
         </Button>
     </LinearLayout>
     <LinearLayout
@@ -52,24 +77,26 @@
             android:textSize="20sp"
             android:hint="backspace morse/text">
         </Button>
-
-        <Button android:id="@+id/space_button"
-            android:textSize="20sp"
+        <Button android:id="@+id/clear_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:hint="space">
+            android:textSize="20sp"
+            android:hint="Clear">
         </Button>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal">
 
-        <Button android:id="@+id/clear_button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:textSize="20sp"
-            android:hint="Clear">
+            android:hint="Voltar">
         </Button>
 
         <Button android:id="@+id/enter_button"
@@ -80,14 +107,6 @@
         </Button>
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/back_button"
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="Voltar"></Button>
 
 
 </LinearLayout>

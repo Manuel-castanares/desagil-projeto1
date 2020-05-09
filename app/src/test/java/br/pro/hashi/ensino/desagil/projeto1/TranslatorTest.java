@@ -198,237 +198,237 @@ public class TranslatorTest {
         Assert.assertEquals('9', translator.morseToChar("----."));
     }
 
-//    @Test
-//    public void fromA() {
-//        Assert.assertEquals(".-", translator.charToMorse('a'));
-//    }
-//
-//    @Test
-//    public void fromB() {
-//        Assert.assertEquals("-...", translator.charToMorse('b'));
-//    }
-//
-//    @Test
-//    public void fromC() {
-//        Assert.assertEquals("-.-.", translator.charToMorse('c'));
-//    }
-//
-//    @Test
-//    public void fromD() {
-//        Assert.assertEquals("-..", translator.charToMorse('d'));
-//    }
-//
-//    @Test
-//    public void fromE() {
-//        Assert.assertEquals(".", translator.charToMorse('e'));
-//    }
-//
-//    @Test
-//    public void fromF() {
-//        Assert.assertEquals("..-.", translator.charToMorse('f'));
-//    }
-//
-//    @Test
-//    public void fromG() {
-//        Assert.assertEquals("--.", translator.charToMorse('g'));
-//    }
-//
-//    @Test
-//    public void fromH() {
-//        Assert.assertEquals("....", translator.charToMorse('h'));
-//    }
-//
-//    @Test
-//    public void fromI() {
-//        Assert.assertEquals("..", translator.charToMorse('i'));
-//    }
-//
-//    @Test
-//    public void fromJ() {
-//        Assert.assertEquals(".---", translator.charToMorse('j'));
-//    }
-//
-//    @Test
-//    public void fromK() {
-//        Assert.assertEquals("-.-", translator.charToMorse('k'));
-//    }
-//
-//    @Test
-//    public void fromL() {
-//        Assert.assertEquals(".-..", translator.charToMorse('l'));
-//    }
-//
-//    @Test
-//    public void fromM() {
-//        Assert.assertEquals("--", translator.charToMorse('m'));
-//    }
-//
-//    @Test
-//    public void fromN() {
-//        Assert.assertEquals("-.", translator.charToMorse('n'));
-//    }
-//
-//    @Test
-//    public void fromO() {
-//        Assert.assertEquals("---", translator.charToMorse('o'));
-//    }
-//
-//    @Test
-//    public void fromP() {
-//        Assert.assertEquals(".--.", translator.charToMorse('p'));
-//    }
-//
-//    @Test
-//    public void fromQ() {
-//        Assert.assertEquals("--.-", translator.charToMorse('q'));
-//    }
-//
-//    @Test
-//    public void fromR() {
-//        Assert.assertEquals(".-.", translator.charToMorse('r'));
-//    }
-//
-//    @Test
-//    public void fromS() {
-//        Assert.assertEquals("...", translator.charToMorse('s'));
-//    }
-//
-//    @Test
-//    public void fromT() {
-//        Assert.assertEquals("-", translator.charToMorse('t'));
-//    }
-//
-//    @Test
-//    public void fromU() {
-//        Assert.assertEquals("..-", translator.charToMorse('u'));
-//    }
-//
-//    @Test
-//    public void fromV() {
-//        Assert.assertEquals("...-", translator.charToMorse('v'));
-//    }
-//
-//    @Test
-//    public void fromW() {
-//        Assert.assertEquals(".--", translator.charToMorse('w'));
-//    }
-//
-//    @Test
-//    public void fromX() {
-//        Assert.assertEquals("-..-", translator.charToMorse('x'));
-//    }
-//
-//    @Test
-//    public void fromY() {
-//        Assert.assertEquals("-.--", translator.charToMorse('y'));
-//    }
-//
-//    @Test
-//    public void fromZ() {
-//        Assert.assertEquals("--..", translator.charToMorse('z'));
-//    }
-//
-//    @Test
-//    public void from0() {
-//        Assert.assertEquals("-----", translator.charToMorse('0'));
-//    }
-//
-//    @Test
-//    public void from1() {
-//        Assert.assertEquals(".----", translator.charToMorse('1'));
-//    }
-//
-//    @Test
-//    public void from2() {
-//        Assert.assertEquals("..---", translator.charToMorse('2'));
-//    }
-//
-//    @Test
-//    public void from3() {
-//        Assert.assertEquals("...--", translator.charToMorse('3'));
-//    }
-//
-//    @Test
-//    public void from4() {
-//        Assert.assertEquals("....-", translator.charToMorse('4'));
-//    }
-//
-//    @Test
-//    public void from5() {
-//        Assert.assertEquals(".....", translator.charToMorse('5'));
-//    }
-//
-//    @Test
-//    public void from6() {
-//        Assert.assertEquals("-....", translator.charToMorse('6'));
-//    }
-//
-//    @Test
-//    public void from7() {
-//        Assert.assertEquals("--...", translator.charToMorse('7'));
-//    }
-//
-//    @Test
-//    public void from8() {
-//        Assert.assertEquals("---..", translator.charToMorse('8'));
-//    }
-//
-//    @Test
-//    public void from9() {
-//        Assert.assertEquals("----.", translator.charToMorse('9'));
-//    }
-//
-//    @Test
-//    public void bfs() {
-//        String[] gold = new String[]{
-//                ".",
-//                "-",
-//                "..",
-//                ".-",
-//                "-.",
-//                "--",
-//                "...",
-//                "..-",
-//                ".-.",
-//                ".--",
-//                "-..",
-//                "-.-",
-//                "--.",
-//                "---",
-//                "....",
-//                "...-",
-//                "..-.",
-//                ".-..",
-//                ".--.",
-//                ".---",
-//                "-...",
-//                "-..-",
-//                "-.-.",
-//                "-.--",
-//                "--..",
-//                "--.-",
-//                ".....",
-//                "....-",
-//                "...--",
-//                "..---",
-//                ".----",
-//                "-....",
-//                "--...",
-//                "---..",
-//                "----.",
-//                "-----",
-//        };
+   @Test
+    public void fromA() {
+        Assert.assertEquals(".-", translator.charToMorse('a'));
+    }
 
-//        LinkedList<String> codes = translator.getCodes();
-//
-//        Assert.assertEquals(gold.length, codes.size());
-//
-//        int i = 0;
-//
-//        for (String code : codes) {
-//            Assert.assertEquals(gold[i], code);
-//
-//            i++;
-//        }
-//    }
+    @Test
+    public void fromB() {
+        Assert.assertEquals("-...", translator.charToMorse('b'));
+    }
+
+    @Test
+    public void fromC() {
+        Assert.assertEquals("-.-.", translator.charToMorse('c'));
+    }
+
+    @Test
+    public void fromD() {
+        Assert.assertEquals("-..", translator.charToMorse('d'));
+    }
+
+    @Test
+    public void fromE() {
+        Assert.assertEquals(".", translator.charToMorse('e'));
+    }
+
+    @Test
+    public void fromF() {
+        Assert.assertEquals("..-.", translator.charToMorse('f'));
+    }
+
+    @Test
+    public void fromG() {
+        Assert.assertEquals("--.", translator.charToMorse('g'));
+    }
+
+    @Test
+    public void fromH() {
+        Assert.assertEquals("....", translator.charToMorse('h'));
+    }
+
+    @Test
+    public void fromI() {
+        Assert.assertEquals("..", translator.charToMorse('i'));
+    }
+
+    @Test
+    public void fromJ() {
+        Assert.assertEquals(".---", translator.charToMorse('j'));
+    }
+
+    @Test
+    public void fromK() {
+        Assert.assertEquals("-.-", translator.charToMorse('k'));
+    }
+
+    @Test
+    public void fromL() {
+        Assert.assertEquals(".-..", translator.charToMorse('l'));
+    }
+
+    @Test
+    public void fromM() {
+        Assert.assertEquals("--", translator.charToMorse('m'));
+    }
+
+    @Test
+    public void fromN() {
+        Assert.assertEquals("-.", translator.charToMorse('n'));
+    }
+
+    @Test
+    public void fromO() {
+        Assert.assertEquals("---", translator.charToMorse('o'));
+    }
+
+    @Test
+    public void fromP() {
+        Assert.assertEquals(".--.", translator.charToMorse('p'));
+    }
+
+    @Test
+    public void fromQ() {
+        Assert.assertEquals("--.-", translator.charToMorse('q'));
+    }
+
+    @Test
+    public void fromR() {
+        Assert.assertEquals(".-.", translator.charToMorse('r'));
+    }
+
+    @Test
+    public void fromS() {
+        Assert.assertEquals("...", translator.charToMorse('s'));
+    }
+
+    @Test
+    public void fromT() {
+        Assert.assertEquals("-", translator.charToMorse('t'));
+    }
+
+    @Test
+    public void fromU() {
+        Assert.assertEquals("..-", translator.charToMorse('u'));
+    }
+
+    @Test
+    public void fromV() {
+        Assert.assertEquals("...-", translator.charToMorse('v'));
+    }
+
+    @Test
+    public void fromW() {
+        Assert.assertEquals(".--", translator.charToMorse('w'));
+    }
+
+    @Test
+    public void fromX() {
+        Assert.assertEquals("-..-", translator.charToMorse('x'));
+    }
+
+    @Test
+    public void fromY() {
+        Assert.assertEquals("-.--", translator.charToMorse('y'));
+    }
+
+    @Test
+    public void fromZ() {
+        Assert.assertEquals("--..", translator.charToMorse('z'));
+    }
+
+    @Test
+    public void from0() {
+        Assert.assertEquals("-----", translator.charToMorse('0'));
+    }
+
+    @Test
+    public void from1() {
+        Assert.assertEquals(".----", translator.charToMorse('1'));
+    }
+
+    @Test
+    public void from2() {
+        Assert.assertEquals("..---", translator.charToMorse('2'));
+    }
+
+    @Test
+    public void from3() {
+        Assert.assertEquals("...--", translator.charToMorse('3'));
+    }
+
+    @Test
+    public void from4() {
+        Assert.assertEquals("....-", translator.charToMorse('4'));
+    }
+
+    @Test
+    public void from5() {
+        Assert.assertEquals(".....", translator.charToMorse('5'));
+    }
+
+    @Test
+    public void from6() {
+        Assert.assertEquals("-....", translator.charToMorse('6'));
+    }
+
+    @Test
+    public void from7() {
+        Assert.assertEquals("--...", translator.charToMorse('7'));
+    }
+
+    @Test
+    public void from8() {
+        Assert.assertEquals("---..", translator.charToMorse('8'));
+    }
+
+    @Test
+    public void from9() {
+        Assert.assertEquals("----.", translator.charToMorse('9'));
+    }
+
+    @Test
+    public void bfs() {
+        String[] gold = new String[]{
+                ".",
+                "-",
+                "..",
+                ".-",
+                "-.",
+                "--",
+                "...",
+                "..-",
+                ".-.",
+                ".--",
+                "-..",
+                "-.-",
+                "--.",
+                "---",
+                "....",
+                "...-",
+                "..-.",
+                ".-..",
+                ".--.",
+                ".---",
+                "-...",
+                "-..-",
+                "-.-.",
+                "-.--",
+                "--..",
+                "--.-",
+                ".....",
+                "....-",
+                "...--",
+                "..---",
+                ".----",
+                "-....",
+                "--...",
+                "---..",
+                "----.",
+                "-----",
+        };
+
+        LinkedList<String> codes = translator.getCodes();
+
+        Assert.assertEquals(gold.length, codes.size());
+
+        int i = 0;
+
+        for (String code : codes) {
+            Assert.assertEquals(gold[i], code);
+
+            i++;
+        }
+    }
 }

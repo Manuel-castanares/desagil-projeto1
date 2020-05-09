@@ -27,9 +27,15 @@ public class MorseActivity extends AppCompatActivity {
 
         translator = new Translator();
 
+        Button chatToMorse = findViewById(R.id.charToMorse);
+
+        Button morseToChar = findViewById(R.id.morseToChar);
+
         Button back_button = findViewById(R.id.back_button);
 
         nextButton(back_button);
+        nextButton(morseToChar);
+        nextButton(chatToMorse);
 
         Button dot_button = findViewById(R.id.dot_button);
         morseButton(dot_button);
@@ -52,7 +58,13 @@ public class MorseActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MorseActivity.this, MainActivity.class));
+                if (button == findViewById(R.id.back_button)){
+                    startActivity(new Intent(MorseActivity.this, MainActivity.class));
+                } else if (button == findViewById(R.id.morseToChar)){
+                    startActivity(new Intent(MorseActivity.this, DicMorse2Char.class));
+                } else if (button == findViewById(R.id.charToMorse)){
+                    startActivity(new Intent(MorseActivity.this, DicChar2Morse.class));
+                }
             }
         });
     }
