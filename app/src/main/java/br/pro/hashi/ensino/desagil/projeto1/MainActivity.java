@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
-
     public void nextButton(Button button){
         button.setOnClickListener(new View.OnClickListener() {
             @Override

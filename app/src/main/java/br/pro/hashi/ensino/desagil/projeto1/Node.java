@@ -9,17 +9,23 @@ public class Node {
     private Node parent;
     private Node left;
     private Node right;
+    private int distance;
 
     public Node(char value) {
         this.value = value;
         this.parent = null;
         this.left = null;
         this.right = null;
+        this.distance = 0;
     }
 
     public char getValue() {
         return value;
     }
+
+    public int getDistance() { return distance; }
+
+    public void setDistance(int distance) { this.distance = distance; }
 
     public Node getParent() {
         return parent;

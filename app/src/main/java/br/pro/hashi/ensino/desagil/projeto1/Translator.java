@@ -7,6 +7,7 @@ package br.pro.hashi.ensino.desagil.projeto1;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class Translator {
     private Node root;
@@ -45,7 +46,7 @@ public class Translator {
 
         Node letL = new Node('l');
         map.put('l',letL);
-        Node plus = new Node('+');
+        Node plus = new Node(' ');
         map.put('+',plus);
         Node plusParent = this.createNode(' ', plus, null);
         map.put(' ',plusParent);
@@ -67,11 +68,11 @@ public class Translator {
 
         Node num6 = new Node('6');
         map.put('6',num6);
-        Node equal = new Node('=');
+        Node equal = new Node(' ');
         map.put('=',equal);
         Node letB = this.createNode('b', num6, equal);
         map.put('b',letB);
-        Node slash = new Node('/');
+        Node slash = new Node(' ');
         map.put('/',slash);
         Node letX = this.createNode('x', slash,null);
         map.put('x',letX);
@@ -172,7 +173,6 @@ public class Translator {
             node = node.getParent();
         }
 
-
         return morse.reverse().toString();
     }
 
@@ -186,6 +186,39 @@ public class Translator {
     // Você deve mudar o recheio deste método,
     // de acordo com os requisitos do projeto.
     public LinkedList<String> getCodes() {
-        return new LinkedList<>();
+        Queue<Node> queue = new LinkedList<>();
+        LinkedList<String> codes = new LinkedList<>();
+
+        root.setDistance(0);
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            Node node = queue.element();
+
+            Node left = node.getLeft();
+            Node right = node.getRight();
+
+            int distance = node.getDistance();
+
+
+            if (left != null) {
+                left.setDistance(distance + 1);
+                queue.add(left);
+                if (left.getValue() != ' ') {
+                    codes.add(charToMorse(left));
+                }
+            }
+
+            if (right != null) {
+                right.setDistance(distance + 1);
+                queue.add(right);
+                if (right.getValue() != ' ') {
+                    codes.add(charToMorse(right));
+                }
+            }
+
+            queue.remove();
+        }
+        return codes;
     }
 }
