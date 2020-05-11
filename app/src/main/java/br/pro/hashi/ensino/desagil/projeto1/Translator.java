@@ -5,6 +5,7 @@
 
 package br.pro.hashi.ensino.desagil.projeto1;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -220,5 +221,33 @@ public class Translator {
             queue.remove();
         }
         return codes;
+    }
+    public char[] getChars(){
+        char [] letras;
+        char [] split;
+        String temp;
+
+        String alfabeto;
+        alfabeto = "";
+        temp = "";
+
+        for(char i: map.keySet()){
+            alfabeto += String.valueOf(i);
+        }
+        letras = alfabeto.toCharArray();
+        Arrays.sort(letras);
+///////////////////////////////////////////////////////
+        for(int i = 1; i < 14; i++){
+            temp += String.valueOf(letras[i]);
+        }
+        for(int i = 14; i < 30; i++){
+            letras[i - 13] = letras[i];
+        }
+        alfabeto = new String(letras);
+        temp = alfabeto + temp;
+
+        split = temp.toCharArray();
+
+        return split;
     }
 }
