@@ -35,8 +35,6 @@ public class DicChar2Morse extends AppCompatActivity {
         for(char i: letras){
             morse.add(i + "  =  " + "' " + translator.charToMorse(i) + " '");
         }
-        //Removento a "root" da arvore
-        morse.pop();
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, morse);
         listView.setAdapter(arrayAdapter);
     }

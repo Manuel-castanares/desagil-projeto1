@@ -225,11 +225,14 @@ public class Translator {
     public char[] getChars(){
         char [] letras;
         char [] split;
-        String temp;
+        char [] resultado;
+
+        split = new char[13];
+        resultado = new char[39];
 
         String alfabeto;
         alfabeto = "";
-        temp = "";
+
 
         for(char i: map.keySet()){
             alfabeto += String.valueOf(i);
@@ -238,16 +241,18 @@ public class Translator {
         Arrays.sort(letras);
 ///////////////////////////////////////////////////////
         for(int i = 1; i < 14; i++){
-            temp += String.valueOf(letras[i]);
+            split[i-1] = letras[i];
         }
-        for(int i = 14; i < 30; i++){
-            letras[i - 13] = letras[i];
+        for(int i = 14; i < 40; i++){
+            letras[i - 14] = letras[i];
         }
-        alfabeto = new String(letras);
-        temp = alfabeto + temp;
-
-        split = temp.toCharArray();
-
-        return split;
+        for(int i = 0; i < 39; i++){
+            if (i < 26){
+                resultado[i] = letras[i];
+            } else {
+                resultado[i] = split[i-26];
+            }
+        }
+        return resultado;
     }
 }
