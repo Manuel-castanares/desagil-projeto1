@@ -11,31 +11,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:orientation="vertical">
+        <TextView android:id="@+id/mensagem"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="100dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:hint="msg">
+        </TextView>
 
-        <Button android:id="@+id/charToMorse"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:hint = "Char 2 Morse">
+        <TextView android:id="@+id/numero"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="70dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:hint="Numero">
+        </TextView>
+    </LinearLayout>
 
-        </Button>
-        <Button android:id="@+id/morseToChar"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:hint = "Morse 2 Char">
-
-        </Button>
-  </LinearLayout>
-
-    <TextView android:id="@+id/texto"
-        android:layout_width="match_parent"
-        android:gravity="center_horizontal"
-        android:layout_height="175dp"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:hint="Texto">
-
-    </TextView>
 
     <TextView android:id="@+id/morse"
         android:layout_width="match_parent"
@@ -59,11 +54,11 @@
             android:textSize="30sp"
             android:hint=".   /  -">
         </Button>
-        <Button android:id="@+id/space_button"
+        <Button android:id="@+id/send_button"
             android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:hint="space">
+            android:hint="Send">
         </Button>
     </LinearLayout>
     <LinearLayout
@@ -91,7 +86,7 @@
         android:gravity="center_horizontal">
 
         <Button
-            android:id="@+id/back_button"
+            android:id="@+id/volta"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -107,16 +102,4 @@
         </Button>
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-        <Button android:id="@+id/sms"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:hint="SMS"
-            android:background="@android:color/holo_blue_dark"
-            android:textColorHint="@android:color/white"></Button>
-    </LinearLayout>
-
 </LinearLayout>
