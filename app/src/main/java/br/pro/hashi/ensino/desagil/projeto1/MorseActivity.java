@@ -100,7 +100,9 @@ public class MorseActivity extends AppCompatActivity {
                 } else if (button == findViewById(R.id.charToMorse)){
                     startActivity(new Intent(MorseActivity.this, DicChar2Morse.class));
                 } else if (button == findViewById(R.id.sms)){
-                    startActivity(new Intent(MorseActivity.this, smsActivity.class));
+                    Intent intent = new Intent(MorseActivity.this, smsActivity.class);
+                    intent.putExtra("MSG",final_frase);
+                    startActivity(intent);
                 }
             }
         });
@@ -158,14 +160,14 @@ public class MorseActivity extends AppCompatActivity {
                         frase = null;
                     } else {
                         Toast toast = Toast.makeText(getApplicationContext(), "Char Invalida", Toast.LENGTH_SHORT);
-                        toast.setGravity(Gravity.CENTER| Gravity.CENTER, 0, -100);
+                        toast.setGravity(Gravity.CENTER| Gravity.CENTER, 0, -300);
                         toast.show();
 
                         frase = null;
                     }
                 } else {
                     Toast toast = Toast.makeText(getApplicationContext(), "Insira Codigo para Traducao", Toast.LENGTH_SHORT);
-                    toast.setGravity(Gravity.CENTER| Gravity.CENTER, 0, -100);
+                    toast.setGravity(Gravity.CENTER| Gravity.CENTER, 0, -300);
                     toast.show();
                 }
             }
