@@ -153,6 +153,9 @@ public class Translator {
                 current = current.getRight();
             }
         }
+        if (current == null){
+            throw new IllegalArgumentException();
+        }
 
         return current.getValue();
     }

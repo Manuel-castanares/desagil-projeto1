@@ -110,18 +110,21 @@ public class smsActivity extends AppCompatActivity {
                     text.setText("");
 
                     if (frase.length() == 5){
-
-                        letra = String.valueOf(translator.morseToChar(frase));
-                        if (final_frase != null){
-                            final_frase += letra;
-                        } else {
-                            final_frase = letra;
+                        try {
+                            letra = String.valueOf(translator.morseToChar(frase));
+                            if (final_frase != null) {
+                                final_frase += letra;
+                            } else {
+                                final_frase = letra;
+                            }
+                            translation.setText(final_frase);
+                        } catch (IllegalArgumentException exception) {
+                            Toast toast = Toast.makeText(getApplicationContext(), "Falha na Traducao", Toast.LENGTH_SHORT);
+                            toast.setGravity(Gravity.CENTER| Gravity.CENTER, 0, -100);
+                            toast.show();
                         }
-                        translation.setText(final_frase);
-
-
-
                         frase = null;
+
                     } else {
                         Toast toast = Toast.makeText(getApplicationContext(), "Numero Invalido", Toast.LENGTH_SHORT);
                         toast.setGravity(Gravity.CENTER| Gravity.CENTER, 0, -100);

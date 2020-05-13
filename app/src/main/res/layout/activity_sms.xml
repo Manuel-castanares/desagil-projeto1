@@ -18,7 +18,8 @@
             android:layout_height="150dp"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:hint="msg">
+            android:textColor="@android:color/darker_gray"
+            android:hint="Mensagem Vazia">
         </TextView>
 
         <TextView android:id="@+id/numero"
